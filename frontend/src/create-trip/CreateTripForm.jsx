@@ -43,11 +43,14 @@ function CreateTrip() {
           />
         </div>
       </div>
-      <h2 className='text-xl my-3 font-medium'>What is your Budget?</h2>
-      <div>
+      {/* these options are made from my objects array in constants/options.jsx */}
+      <h2 className='text-xl my-3 font-medium'>What is your budget?</h2>
+      <div className='grid grid-cols-3 gap-5 mt-5'>
         {SelectBudgetOptions.map((item, index) => (
-          <div key={index}>
-            <h2>{item.icon}</h2>
+          <div key={index} className='p-4 border cursor-pointer rounded-lg hover:shadow-lg'>
+            <h2 className='text-4xl'>{item.icon}</h2>
+            <h2 className='font-bold text-lg'>{item.title}</h2>
+            <h2 className ='text-sm text-gray-500'>{item.desc}</h2>
           </div>
         ))}
       </div>
