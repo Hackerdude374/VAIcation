@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import {Button} from '../ui/button'
+import {Link} from 'react-router-dom'
 function Hero () {
  
     return (
@@ -20,9 +21,11 @@ function Hero () {
 
 
         </p>
+        <Link to ={'/create-trip'}>
         <Button>
         Get Started, It's Free!
         </Button>
+        </Link>
       </div>
     )
   
