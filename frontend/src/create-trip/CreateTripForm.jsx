@@ -1,6 +1,9 @@
-import React from 'react'
-import { GooglePlacesAutocomplete } from 'react-google-places-autocomplete'
+import {React, useState} from 'react'
+import GooglePlacesAutocomplete  from 'react-google-places-autocomplete'
+import { Input } from "@/components/ui/input"
+
 function CreateTrip() {
+  const[place,setPlace]=useState();
   return (
     <div className='sm:px-10 md:px-32 lg:px-56 xl:px-10 px-5 mt-10'>
       <h2 className='font-bold text-3xl'>
@@ -14,12 +17,27 @@ function CreateTrip() {
           <h2 className='text-xl my-3 font-medium'> What is destination of choice?
           </h2>
           <GooglePlacesAutocomplete
-          apiKey={import.meta.env.GOOGLE_PLACES_KEY}
-          
+          apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
+          selectProps={{
+              place,
+              onChange:(v)=>{setPlace(v);console.log(v)}
+          }}
           />
         </div>
+<div>
+<h2 className='text-xl my-3 font-medium'> How many days is your trip?
+          </h2>
+          <Input placeholder={'Ex.3'} type="number" />
 
+
+
+</div>
       </div>
+
+
+
+
+
     </div>
   )
 }
