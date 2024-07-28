@@ -12,7 +12,7 @@ function CreateTrip() {
           Just provide some basic information, and our trip planner
         </p>
       </h2>
-      <div className='mt-20'>
+      <div className='mt-20 flex flex-col gap-10'>
         <div>
           <h2 className='text-xl my-3 font-medium'> What is destination of choice?
           </h2>
