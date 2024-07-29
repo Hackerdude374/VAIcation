@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { Input } from "@/components/ui/input";
 import { SelectBudgetOptions, SelectTravelesList } from "@/constants/options";
-
+import {Button }from '@/components/ui/button';
 function CreateTrip() {
   const [place, setPlace] = useState();
   const [days, setDays] = useState("");
@@ -89,10 +89,10 @@ function CreateTrip() {
     </div>
 
 
+<div className = "my-10 justify-end flex">
+<Button>Generate your dream vacation!</Button>
 
-
-
-
+</div>
 
 
     </div>
